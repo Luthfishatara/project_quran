@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/click"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        
+        <ImageView
+            android:src="@drawable/bg_custom"
+            android:layout_width="match_parent"
+            android:layout_height="200dp" />
+        
+        <androidx.core.widget.NestedScrollView
+            android:paddingTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_view"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+
+        </androidx.core.widget.NestedScrollView>
+        
+        
+    </RelativeLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
