@@ -24,6 +24,7 @@ import com.example.myquran.R;
 import com.example.myquran.adapter.AdapterHome;
 import com.example.myquran.base.Constant;
 import com.example.myquran.modal.Modal;
+import com.github.ybq.android.spinkit.SpinKitView;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -40,6 +41,7 @@ public class FragmentHome extends Fragment {
     AdapterHome adapterHome;
     RequestQueue queue;
     Context context;
+    SpinKitView spinKitViews;
 
 
 
@@ -53,6 +55,7 @@ public class FragmentHome extends Fragment {
 
         recyclerView = view.findViewById(R.id.recycler_view);
         modal = new ArrayList<>();
+        spinKitViews = view.findViewById(R.id.spin_kit);
         glm = new GridLayoutManager(getContext(), 2);
 
         recyclerView.setLayoutManager(glm);
@@ -70,6 +73,8 @@ public class FragmentHome extends Fragment {
             @Override
             public void onResponse(JSONArray response) {
 
+                spinKitViews.setVisibility(View.VISIBLE);
+
                 try {
                     for (int i = 0; i < response.length(); i++) {
 
@@ -83,6 +88,7 @@ public class FragmentHome extends Fragment {
                         modal.add(modals);
                         adapterHome = new AdapterHome(getActivity(), modal);
                         recyclerView.setAdapter(adapterHome);
+                        spinKitViews.setVisibility(View.GONE);
 
                     }
 

@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/testing"
+        app:cardUseCompatPadding="true"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+
+        <LinearLayout
+            android:background="@drawable/mosque"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="357dp">
+
+
+            <LinearLayout
+                android:background="@drawable/bg_bck"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <TextView
+                    android:id="@+id/tanggal"
+                    android:layout_marginTop="10dp"
+                    android:textSize="25dp"
+                    android:text="Kamis, 12 Dec 2019"
+                    android:textColor="@color/white"
+                    android:textAlignment="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_marginTop="20dp"
+                    android:text="JADWAL SHOLAT :"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:textSize="21dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <LinearLayout
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                <TextView
+                    android:textSize="20dp"
+                    android:text="Imsyak"
+                    android:textColor="@color/white"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/imsyak"
+                        android:text="@string/app_name"
+                        android:textColor="@color/white"
+                        android:textSize="20dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                <TextView
+                    android:textSize="20dp"
+                    android:text="Subuh"
+                    android:textColor="@color/white"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/subuh"
+                        android:text="@string/app_name"
+                        android:textColor="@color/white"
+                        android:textSize="20dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:textSize="20dp"
+                        android:text="Terbit"
+                        android:textColor="@color/white"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/terbit"
+                        android:textColor="@color/white"
+                        android:text="@string/app_name"
+                        android:textSize="20dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:textSize="20dp"
+                        android:text="Dhuha"
+                        android:textColor="@color/white"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/dhuha"
+                        android:textColor="@color/white"
+                        android:text="@string/app_name"
+                        android:textSize="20dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:textSize="20dp"
+                        android:text="Dzuhur"
+                        android:textColor="@color/white"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/dzuhur"
+                        android:textColor="@color/white"
+                        android:text="@string/app_name"
+                        android:textSize="20dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:textSize="20dp"
+                        android:text="Ashar"
+                        android:textColor="@color/white"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/ashar"
+                        android:textColor="@color/white"
+                        android:text="@string/app_name"
+                        android:textSize="20dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:textSize="20dp"
+                        android:text="Maghrib"
+                        android:textColor="@color/white"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/maghrib"
+                        android:textColor="@color/white"
+                        android:text="@string/app_name"
+                        android:textSize="20dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:textSize="20dp"
+                        android:text="Isya"
+                        android:textColor="@color/white"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/isya"
+                        android:text="@string/app_name"
+                        android:textColor="@color/white"
+                        android:textSize="20dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

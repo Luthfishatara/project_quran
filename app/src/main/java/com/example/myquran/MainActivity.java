@@ -8,7 +8,9 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.FrameLayout;
 
+import com.example.myquran.fragment.FragmentAlquran;
 import com.example.myquran.fragment.FragmentHome;
+import com.example.myquran.fragment.FragmentSholat;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
@@ -45,11 +47,22 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
 
+        int userId = menuItem.getItemId();
         Fragment f = null;
 
-        switch (menuItem.getItemId()){
+        switch (userId){
 
+            case R.id.home:
+                f = new FragmentHome();
+                break;
 
+            case R.id.quran:
+                f = new FragmentAlquran();
+                break;
+
+            case R.id.sholat:
+                f = new FragmentSholat();
+                break;
 
         }
         return loadFragment(f);
