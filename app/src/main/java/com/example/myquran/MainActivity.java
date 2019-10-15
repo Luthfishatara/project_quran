@@ -13,6 +13,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.FrameLayout;
 
+import com.example.myquran.adapter.AdapterHome;
 import com.example.myquran.fragment.FragmentAlquran;
 import com.example.myquran.fragment.FragmentHome;
 import com.example.myquran.fragment.FragmentSholat;
@@ -24,6 +25,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
     BottomNavigationView bottomNavigationView;
     Toolbar toolbar;
     SearchView searchView;
+    AdapterHome adapterHome;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,6 +66,13 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
 
         @Override
         public boolean onQueryTextChange(String newText) {
+            if (adapterHome != null) {
+                if (!searchView.isIconified()) {
+                    adapterHome.getFilter().filter(newText);
+                    adapterHome.notifyDataSetChanged();
+                }
+
+            }
             return true;
         }
     };

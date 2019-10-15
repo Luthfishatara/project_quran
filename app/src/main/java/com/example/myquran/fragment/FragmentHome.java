@@ -42,8 +42,6 @@ import java.util.ArrayList;
 
 public class FragmentHome extends Fragment {
 
-    private SearchView searchView = null;
-    private SearchView.OnQueryTextListener queryTextListener;
 
     View view;
     RecyclerView recyclerView;
