@@ -40,12 +40,12 @@ public class DetailSurat extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.fragment_home);
+        setContentView(R.layout.detail_surat);
 
         queue = Volley.newRequestQueue(getApplicationContext());
         getId = getIntent().getStringExtra("nomor");
-        detail = findViewById(R.id.recycler_view);
-        spinKitViews = findViewById(R.id.spin_kit);
+        detail = findViewById(R.id.detail);
+        spinKitViews = findViewById(R.id.spin_kit2);
         detailQurans = new ArrayList<>();
 
         glm = new GridLayoutManager(getApplicationContext(), 1);

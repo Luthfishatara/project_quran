@@ -6,12 +6,12 @@
         android:icon="@mipmap/ic_home"/>
 
     <item android:id="@+id/quran"
-        android:title="Alquran"
-        android:icon="@mipmap/ic_quran"/>
+        android:title="Audio"
+        android:icon="@mipmap/ic_player"/>
 
     <item android:id="@+id/sholat"
         android:title="Jadwal Sholat"
-        android:icon="@mipmap/ic_sholat"/>
+        android:icon="@mipmap/ic_masjid"/>
 
 
 </menu>

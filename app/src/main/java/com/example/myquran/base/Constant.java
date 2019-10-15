@@ -8,4 +8,5 @@ public class Constant {
     public static final String ROOT_SEMUA ="https://api.banghasan.com/sholat/format/json/kota";
     public static final String ROOT_JADWAL ="https://api.banghasan.com/sholat/format/json/jadwal/kota/";
     public static final String ROOT_ENDJADWAL ="/tanggal/";
+    public static final String ROOT_AUDIO = "http://mp3quran.net/api/_english.php";
 }

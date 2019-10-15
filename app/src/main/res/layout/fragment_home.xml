@@ -17,6 +17,7 @@
         android:id="@+id/click"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
         
         <ImageView
             android:src="@drawable/bg_custom"

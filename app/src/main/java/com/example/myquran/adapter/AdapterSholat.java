@@ -62,7 +62,7 @@ public class AdapterSholat extends RecyclerView.Adapter<RecyclerView.ViewHolder>
         ((MyJadwalSholat) holder).kota.setText(modalJadwals.get(i).getKota());
 
         Date date = new Date();
-        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("YYYY-MM-dd");
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
         final String dateku = simpleDateFormat.format(date);
 
         ((MyJadwalSholat) holder).idKota.setText(modalJadwals.get(i).getIdKota());

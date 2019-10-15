@@ -20,6 +20,7 @@
         </activity>
         <activity android:name=".DetailSurat"/>
         <activity android:name=".DetailJadwal"/>
+        <activity android:name=".DetailAudio"/>
     </application>
 
 </manifest>

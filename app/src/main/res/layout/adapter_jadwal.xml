@@ -7,8 +7,8 @@
     android:layout_height="wrap_content">
 
     <androidx.cardview.widget.CardView
+        android:layout_marginTop="10dp"
         android:id="@+id/testing"
-        app:cardUseCompatPadding="true"
         app:cardCornerRadius="8dp"
         app:cardElevation="5dp"
         android:layout_width="match_parent"
@@ -17,6 +17,7 @@
 
 
         <LinearLayout
+            android:gravity="center_horizontal"
             android:background="@drawable/mosque"
             android:orientation="horizontal"
             android:layout_width="match_parent"
@@ -24,6 +25,7 @@
 
 
             <LinearLayout
+                android:gravity="center_horizontal"
                 android:background="@drawable/bg_bck"
                 android:orientation="vertical"
                 android:layout_width="match_parent"
@@ -52,13 +54,15 @@
                 <LinearLayout
                     android:layout_marginTop="10dp"
                     android:gravity="center"
+                    android:layout_marginLeft="5dp"
                     android:orientation="horizontal"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
 
                 <TextView
                     android:textSize="20dp"
                     android:text="Imsyak"
+                    android:gravity="center"
                     android:textColor="@color/white"
                     android:layout_width="150dp"
                     android:layout_height="wrap_content" />
@@ -66,9 +70,10 @@
                     <TextView
                         android:id="@+id/imsyak"
                         android:text="@string/app_name"
+                        android:gravity="center"
                         android:textColor="@color/white"
                         android:textSize="20dp"
-                        android:layout_width="match_parent"
+                        android:layout_width="150dp"
                         android:layout_height="wrap_content" />
 
                 </LinearLayout>
@@ -76,13 +81,15 @@
                 <LinearLayout
                     android:layout_marginTop="5dp"
                     android:gravity="center"
+                    android:layout_marginLeft="5dp"
                     android:orientation="horizontal"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
 
                 <TextView
                     android:textSize="20dp"
                     android:text="Subuh"
+                    android:gravity="center"
                     android:textColor="@color/white"
                     android:layout_width="150dp"
                     android:layout_height="wrap_content" />
@@ -92,7 +99,8 @@
                         android:text="@string/app_name"
                         android:textColor="@color/white"
                         android:textSize="20dp"
-                        android:layout_width="match_parent"
+                        android:gravity="center"
+                        android:layout_width="150dp"
                         android:layout_height="wrap_content" />
 
                 </LinearLayout>
@@ -100,14 +108,16 @@
                 <LinearLayout
                     android:layout_marginTop="5dp"
                     android:gravity="center"
+                    android:layout_marginLeft="5dp"
                     android:orientation="horizontal"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
 
                     <TextView
                         android:textSize="20dp"
                         android:text="Terbit"
                         android:textColor="@color/white"
+                        android:gravity="center"
                         android:layout_width="150dp"
                         android:layout_height="wrap_content" />
 
@@ -116,20 +126,23 @@
                         android:textColor="@color/white"
                         android:text="@string/app_name"
                         android:textSize="20dp"
-                        android:layout_width="match_parent"
+                        android:gravity="center"
+                        android:layout_width="150dp"
                         android:layout_height="wrap_content" />
 
                 </LinearLayout>
                 <LinearLayout
                     android:layout_marginTop="5dp"
                     android:gravity="center"
+                    android:layout_marginLeft="5dp"
                     android:orientation="horizontal"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
 
                     <TextView
                         android:textSize="20dp"
                         android:text="Dhuha"
+                        android:gravity="center"
                         android:textColor="@color/white"
                         android:layout_width="150dp"
                         android:layout_height="wrap_content" />
@@ -139,20 +152,23 @@
                         android:textColor="@color/white"
                         android:text="@string/app_name"
                         android:textSize="20dp"
-                        android:layout_width="match_parent"
+                        android:gravity="center"
+                        android:layout_width="150dp"
                         android:layout_height="wrap_content" />
 
                 </LinearLayout>
                 <LinearLayout
                     android:layout_marginTop="5dp"
                     android:gravity="center"
+                    android:layout_marginLeft="5dp"
                     android:orientation="horizontal"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
 
                     <TextView
                         android:textSize="20dp"
                         android:text="Dzuhur"
+                        android:gravity="center"
                         android:textColor="@color/white"
                         android:layout_width="150dp"
                         android:layout_height="wrap_content" />
@@ -162,20 +178,23 @@
                         android:textColor="@color/white"
                         android:text="@string/app_name"
                         android:textSize="20dp"
-                        android:layout_width="match_parent"
+                        android:gravity="center"
+                        android:layout_width="150dp"
                         android:layout_height="wrap_content" />
 
                 </LinearLayout>
                 <LinearLayout
                     android:layout_marginTop="5dp"
                     android:gravity="center"
+                    android:layout_marginLeft="5dp"
                     android:orientation="horizontal"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
 
                     <TextView
                         android:textSize="20dp"
                         android:text="Ashar"
+                        android:gravity="center"
                         android:textColor="@color/white"
                         android:layout_width="150dp"
                         android:layout_height="wrap_content" />
@@ -185,21 +204,24 @@
                         android:textColor="@color/white"
                         android:text="@string/app_name"
                         android:textSize="20dp"
-                        android:layout_width="match_parent"
+                        android:gravity="center"
+                        android:layout_width="150dp"
                         android:layout_height="wrap_content" />
 
                 </LinearLayout>
                 <LinearLayout
                     android:layout_marginTop="5dp"
                     android:gravity="center"
+                    android:layout_marginLeft="5dp"
                     android:orientation="horizontal"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
 
                     <TextView
                         android:textSize="20dp"
                         android:text="Maghrib"
                         android:textColor="@color/white"
+                        android:gravity="center"
                         android:layout_width="150dp"
                         android:layout_height="wrap_content" />
 
@@ -208,20 +230,23 @@
                         android:textColor="@color/white"
                         android:text="@string/app_name"
                         android:textSize="20dp"
-                        android:layout_width="match_parent"
+                        android:gravity="center"
+                        android:layout_width="150dp"
                         android:layout_height="wrap_content" />
 
                 </LinearLayout>
                 <LinearLayout
                     android:layout_marginTop="5dp"
                     android:gravity="center"
+                    android:layout_marginLeft="5dp"
                     android:orientation="horizontal"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
 
                     <TextView
                         android:textSize="20dp"
                         android:text="Isya"
+                        android:gravity="center"
                         android:textColor="@color/white"
                         android:layout_width="150dp"
                         android:layout_height="wrap_content" />
@@ -231,7 +256,8 @@
                         android:text="@string/app_name"
                         android:textColor="@color/white"
                         android:textSize="20dp"
-                        android:layout_width="match_parent"
+                        android:gravity="center"
+                        android:layout_width="150dp"
                         android:layout_height="wrap_content" />
 
                 </LinearLayout>

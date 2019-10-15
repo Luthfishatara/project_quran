@@ -1,14 +1,22 @@
 package com.example.myquran.fragment;
 
+import android.app.SearchManager;
 import android.content.Context;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.SearchView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.view.MenuItemCompat;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -34,6 +42,9 @@ import java.util.ArrayList;
 
 public class FragmentHome extends Fragment {
 
+    private SearchView searchView = null;
+    private SearchView.OnQueryTextListener queryTextListener;
+
     View view;
     RecyclerView recyclerView;
     ArrayList<Modal> modal;
@@ -42,6 +53,7 @@ public class FragmentHome extends Fragment {
     RequestQueue queue;
     Context context;
     SpinKitView spinKitViews;
+    Toolbar toolbar;
 
 
 
@@ -50,6 +62,7 @@ public class FragmentHome extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
         view = inflater.inflate(R.layout.fragment_home, container, false);
+        toolbar = view.findViewById(R.id.toolbar);
 
         queue = Volley.newRequestQueue(getActivity());
 
@@ -62,10 +75,11 @@ public class FragmentHome extends Fragment {
 
         getDataFromServerDenganJaringanSuperCepatYaituTelkomselSelaluDihati();
 
-
+        setHasOptionsMenu(true);
         return view;
 
     }
+
 
     private void getDataFromServerDenganJaringanSuperCepatYaituTelkomselSelaluDihati() {
 

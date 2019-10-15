@@ -18,7 +18,6 @@ import java.util.ArrayList;
 public class AdapterDetailJadwal extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
     ArrayList<ModalDetailJadwal> modalDetailJadwals;
-    ArrayList<ModalJadwal> modalJadwals;
     Context context;
 
     public AdapterDetailJadwal(ArrayList<ModalDetailJadwal> modalDetailJadwals, Context context) {
