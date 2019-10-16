@@ -35,8 +35,6 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
 
         toolbar = findViewById(R.id.toolbar);
 
-        setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
 
         frame = findViewById(R.id.frame);
@@ -46,36 +44,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         loadFragment(new FragmentHome());
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        MenuInflater inflater = getMenuInflater();
-        menu.clear();
-        inflater.inflate(R.menu.search_view, menu);
-        MenuItem item = menu.findItem(R.id.serach);
-        MenuItemCompat.setShowAsAction(item, MenuItemCompat.SHOW_AS_ACTION_COLLAPSE_ACTION_VIEW | MenuItemCompat.SHOW_AS_ACTION_IF_ROOM);
-        searchView = (SearchView) menu.findItem(R.id.serach).getActionView();
-        searchView.setOnQueryTextListener(queryDaus);
-        return super.onCreateOptionsMenu(menu);
-    }
 
-    SearchView.OnQueryTextListener queryDaus = new SearchView.OnQueryTextListener() {
-        @Override
-        public boolean onQueryTextSubmit(String query) {
-            return false;
-        }
-
-        @Override
-        public boolean onQueryTextChange(String newText) {
-            if (adapterHome != null) {
-                if (!searchView.isIconified()) {
-                    adapterHome.getFilter().filter(newText);
-                    adapterHome.notifyDataSetChanged();
-                }
-
-            }
-            return true;
-        }
-    };
 
     private boolean loadFragment(Fragment fragment) {
         if (fragment != null ){

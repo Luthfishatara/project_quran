@@ -43,7 +43,7 @@ public class AdapterHome extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     public AdapterHome(Context context, ArrayList<Modal> modals) {
         this.context = context;
         this.modals = modals;
-        this.filterAyatHome = filterAyatHome;
+        this.filterAyatHome = modals;
     }
 
     class MyAdapter extends RecyclerView.ViewHolder {

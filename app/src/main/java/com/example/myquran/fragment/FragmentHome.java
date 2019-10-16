@@ -10,11 +10,11 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.SearchView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.SearchView;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.MenuItemCompat;
 import androidx.fragment.app.Fragment;
@@ -52,6 +52,7 @@ public class FragmentHome extends Fragment {
     Context context;
     SpinKitView spinKitViews;
     Toolbar toolbar;
+    SearchView searchView;
 
 
 
@@ -60,23 +61,57 @@ public class FragmentHome extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
         view = inflater.inflate(R.layout.fragment_home, container, false);
-        toolbar = view.findViewById(R.id.toolbar);
+        setHasOptionsMenu(true);
 
         queue = Volley.newRequestQueue(getActivity());
 
         recyclerView = view.findViewById(R.id.recycler_view);
         modal = new ArrayList<>();
         spinKitViews = view.findViewById(R.id.spin_kit);
+        toolbar = view.findViewById(R.id.toolbar);
         glm = new GridLayoutManager(getContext(), 2);
 
         recyclerView.setLayoutManager(glm);
+        recyclerView.setHasFixedSize(true);
+
+        ((AppCompatActivity) getActivity()).setSupportActionBar(toolbar);
 
         getDataFromServerDenganJaringanSuperCepatYaituTelkomselSelaluDihati();
 
-        setHasOptionsMenu(true);
         return view;
 
     }
+
+    @Override
+    public void onCreateOptionsMenu(@NonNull Menu menu, @NonNull MenuInflater inflater) {
+        menu.clear();
+        inflater.inflate(R.menu.search_view, menu);
+        MenuItem item = menu.findItem(R.id.serach);
+        MenuItemCompat.setShowAsAction(item, MenuItemCompat.SHOW_AS_ACTION_COLLAPSE_ACTION_VIEW | MenuItemCompat.SHOW_AS_ACTION_IF_ROOM);
+        searchView = (androidx.appcompat.widget.SearchView) menu.findItem(R.id.serach).getActionView();
+        searchView.setOnQueryTextListener(queryDaus);
+        super.onCreateOptionsMenu(menu, inflater);
+    }
+
+    androidx.appcompat.widget.SearchView.OnQueryTextListener queryDaus = new SearchView.OnQueryTextListener() {
+        @Override
+        public boolean onQueryTextSubmit(String query) {
+            return false;
+        }
+
+        @Override
+        public boolean onQueryTextChange(String newText) {
+            if (adapterHome != null) {
+                if (!searchView.isIconified()) {
+                    adapterHome.getFilter().filter(newText);
+                    adapterHome.notifyDataSetChanged();
+                }
+
+            }
+            searchView.setQueryHint("Cari Surat");
+            return true;
+        }
+    };
 
 
     private void getDataFromServerDenganJaringanSuperCepatYaituTelkomselSelaluDihati() {
