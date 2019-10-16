@@ -102,6 +102,8 @@ public class FragmentHome extends Fragment {
                         recyclerView.setAdapter(adapterHome);
                         spinKitViews.setVisibility(View.GONE);
 
+                        Log.d("DAUSMEN", nama);
+
                     }
 
                 }catch (Exception e) {

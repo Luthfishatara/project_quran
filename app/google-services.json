@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "394416032874",
+    "firebase_url": "https://myquran-3b4fa.firebaseio.com",
+    "project_id": "myquran-3b4fa",
+    "storage_bucket": "myquran-3b4fa.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:394416032874:android:94ae75deca98645b92ce13",
+        "android_client_info": {
+          "package_name": "com.example.myquran"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "394416032874-f289hkc0814rfjftvdhtu9bfjepja90d.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.myquran",
+            "certificate_hash": "9ce8fccb96c1f06696597e5835fcfcbcc9a26244"
+          }
+        },
+        {
+          "client_id": "394416032874-91sibn2pe9jgtf1spta8716uk1pb47ce.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCwiMXn8dmxMnErTByPoCi_OUQyLTSoCqk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "394416032874-91sibn2pe9jgtf1spta8716uk1pb47ce.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
